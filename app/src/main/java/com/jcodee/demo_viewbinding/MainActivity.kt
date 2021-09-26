@@ -6,7 +6,6 @@ import com.jcodee.demo_viewbinding.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    //Declare variable of type view binding
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,12 +13,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //Call component from these view
-        binding.tvText.text = "Hello"
+        binding.tvText.text = getString(R.string.str_hello)
         otherMethod()
     }
 
     private fun otherMethod() {
-        binding.tvButton.text = "My Button"
+        binding.tvButton.text = getString(R.string.str_my_button)
     }
 }
